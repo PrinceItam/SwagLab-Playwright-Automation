@@ -1,4 +1,4 @@
-import { Given, When, Then, After, Before, AfterAll } from "@cucumber/cucumber";
+import { After, Before, AfterAll } from "@cucumber/cucumber";
 import { Browser, BrowserContext, chromium, Page, test as base } from "@playwright/test";
 
 let browser: Browser;
