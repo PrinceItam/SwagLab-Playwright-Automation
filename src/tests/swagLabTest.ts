@@ -1,14 +1,14 @@
 import { Given, When, Then, defineStep, setDefaultTimeout } from "@cucumber/cucumber"
 import { Page } from "@playwright/test"
-import { page} from "../tests/hooks"
-import { LoginPage } from "../pageObjects/loginPage";
+import { page } from "../tests/hooks"
+import { LoginPage } from "../pageObjects/loginPage"
 import { ProductPage } from "../pageObjects/productsPage"
 import { InvalidLoginPage } from "../pageObjects/lockedOutUserLogic"
 
 //setDefaultTimeout(1000 * 60 * 20);  // For debugging use only
 
 Given('standard customer is logged in', async function (this: { page: Page }) {
-  
+
   const username = 'standard_user'
   const password = 'secret_sauce'
   const loginPage = new LoginPage(page)
@@ -72,22 +72,22 @@ Given('customer is a locked out customer', async function () {
   await invalidLoginPage.lockedOutUser()
 
 })
-  
-  When('the customer attempts to login using proper credentials', async function() {
-    const invalidLoginPage = new InvalidLoginPage(page)
-    await invalidLoginPage.loginwithInvalidCredentials()
-    
+
+When('the customer attempts to login using proper credentials', async function () {
+  const invalidLoginPage = new InvalidLoginPage(page)
+  await invalidLoginPage.loginwithInvalidCredentials()
+
 })
 
-When('login fails', async function() {
+When('login fails', async function () {
   const invalidLoginPage = new InvalidLoginPage(page)
   await invalidLoginPage.loginError()
-  
+
 })
 
-Then('the customer is presented with error state', async function() {
+Then('the customer is presented with error state', async function () {
   const invalidLoginPage = new InvalidLoginPage(page)
-   await invalidLoginPage.errorstate()
+  await invalidLoginPage.errorstate()
 
 })
 

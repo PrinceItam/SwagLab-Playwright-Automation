@@ -1,9 +1,5 @@
-Feature: Login Action
+Feature: Automate Swaglab Web UI Page 
 
-   As a standard user
-   I want to verify login with valid credentials 
-
-   
    Scenario: Customer purchases products
    Given standard customer is logged in
    When the customer adds multiple products to the shopping cart
