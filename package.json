@@ -10,27 +10,26 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@cucumber/cucumber": "^10.8.0",
     "@playwright/test": "^1.44.1",
     "@types/node": "^20.14.2",
+    "cucumber": "^6.0.7",
     "cucumber-html-reporter": "^7.1.1",
+    "dotenv": "^16.4.5",
+    "fsevents": "^2.3.2",
     "playwright": "1.44.1",
     "prettier": "^3.3.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5",
-    "cucumber": "^6.0.7",
-    "dotenv": "^16.4.5",
-    "fsevents": "^2.3.2",
     "undici-types": "^5.26.5"
   },
   "directories": {
     "test": "tests"
   },
   "dependencies": {
-   
     "fsevents": "^2.3.2",
     "playwright": "^1.44.1",
     "playwright-core": "^1.44.1"
-    
   },
   "description": ""
 }
