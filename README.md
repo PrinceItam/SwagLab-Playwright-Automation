@@ -31,3 +31,4 @@ Ensure that you have the following installed on your local machine:
 - To rerun failed tests, use the command `npm run test:failed`.
 
 
+# SwagLab-Playwright-Automation
